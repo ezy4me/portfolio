@@ -8,9 +8,9 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <Link
-        to="/home"
+        to="/"
         className={`sidebar__item ${
-          currentPath === "/home" ? "sidebar__item--active" : ""
+          currentPath === "/" ? "sidebar__item--active" : ""
         }`}>
         <FaHome className="sidebar__icon" />
         <span className="sidebar__text">Home</span>

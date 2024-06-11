@@ -12,8 +12,8 @@ import {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
+      <Route index element={<HomePage />} />
       <Route path="/about" element={<AboutPage />} />
-      <Route path="/home" element={<HomePage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/projects" element={<ProjectsPage />} />
     </Route>

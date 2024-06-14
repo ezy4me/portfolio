@@ -20,8 +20,7 @@ function AboutPage() {
             <span className="string">"Web Developer"</span>,<br />
             &nbsp;&nbsp;<span className="property">interests</span>: [
             <span className="string">"Coding"</span>,{" "}
-            <span className="string">"Music"</span>,{" "}
-            <br />
+            <span className="string">"Music"</span>, <br />
             &nbsp;&nbsp;<span className="property">skills</span>: [
             <span className="string">"JavaScript"</span>,{" "}
             <span className="string">"React"</span>,{" "}
@@ -40,21 +39,23 @@ function AboutPage() {
         </p>
         <p className="text">
           <strong>Frontend:</strong>
-          <ul>
-            <li>Frameworks: Vue3 (Options API & Composition API), React</li>
-            <li>UI Frameworks: MUI, Bootstrap, Tailwind, Quasar, Vuetify, Ant Design</li>
-            <li>CSS Preprocessors: Sass/Scss</li>
-            <li>State Managers: Vuex, Redux, Redux Toolkit, Zustand</li>
-          </ul>
         </p>
+        <ul className="text">
+          <li>Frameworks: Vue3 (Options API & Composition API), React</li>
+          <li>
+            UI Frameworks: MUI, Bootstrap, Tailwind, Quasar, Vuetify, Ant Design
+          </li>
+          <li>CSS Preprocessors: Sass/Scss</li>
+          <li>State Managers: Vuex, Redux, Redux Toolkit, Zustand</li>
+        </ul>
         <p className="text">
           <strong>Backend:</strong>
-          <ul>
-            <li>Frameworks: Express.js, Nest.js</li>
-            <li>RESTful API Development</li>
-            <li>Databases: PostgreSQL, MS SQL Server</li>
-          </ul>
         </p>
+        <ul className="text">
+          <li>Frameworks: Express.js, Nest.js</li>
+          <li>RESTful API Development</li>
+          <li>Databases: PostgreSQL, MS SQL Server</li>
+        </ul>
         <p className="text">
           I primarily write code in Vue3 but am also proficient with React and
           Redux (RTK), and I am ready to switch to React if needed. I have

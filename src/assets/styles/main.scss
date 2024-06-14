@@ -2,6 +2,8 @@
 
 @import "./base.scss";
 
+@import "./components/background.scss";
+
 @import "./components/modal.scss";
 @import "./components/carousel.scss";
 @import "./components/project-info.scss";
@@ -9,6 +11,8 @@
 @import "./components/sidebar.scss";
 @import "./components/typewriter.scss";
 @import "./components/contact-form.scss";
+@import "./components/code.scss";
+@import "./components/page.scss";
 
 @import "./pages/home.scss";
 @import "./pages/projects.scss";

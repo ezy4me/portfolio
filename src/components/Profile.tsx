@@ -26,9 +26,19 @@ const Profile: React.FC = () => {
             <a href="https://t.me/sadwoe" className="profile__social-link">
               <FaTelegram />
             </a>
-            <a href="https://github.com/ezy4me" className="profile__social-link">
+            <a
+              href="https://github.com/ezy4me"
+              className="profile__social-link">
               <FaGithub />
             </a>
+          </div>
+          <div className="language">
+            <div className="language__item">
+              <img src="/rus.png" alt="Russian" />
+            </div>
+            <div className="language__item">
+              <img src="/eng.png" alt="English" />
+            </div>
           </div>
         </div>
       </div>

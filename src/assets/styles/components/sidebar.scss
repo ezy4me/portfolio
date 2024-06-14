@@ -47,18 +47,4 @@
     &__text {
         font-size: 16px;
     }
-
-    // &::before {
-    //     content: '';
-    //     position: absolute;
-    //     top: -10px; /* Смещение вверх */
-    //     left: -10px; /* Смещение влево */
-    //     width: 100%;
-    //     height: 100%;
-    //     background: #101010;
-    //     border-radius: 10px;
-    //     box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.5); /* Тень */
-    //     z-index: -1; /* Позади основного блока */
-    //     transform: scale(1.1); /* Увеличение размера для создания эффекта */
-    // }
 }

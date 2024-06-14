@@ -6,8 +6,8 @@ $star-light: #f6fbff;
 $num-stars: 200;
 
 $primary-color: #4b0082; // Indigo
-$secondary-color: #2e0854; // Dark Purple
-$gradient-start: #3b0b39; // Very Dark Purple
+$secondary-color: #5900ff; // Dark Purple
+$gradient-start: #5900ff; // Very Dark Purple
 $gradient-end: #1d004d; // Deep Indigo
 
 * {
@@ -29,6 +29,16 @@ body {
     height: 100vh;
     background: $sky-color;
     z-index: -1;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba($color: #000000, $alpha: 0.7);
+    }
 }
 
 .moon {
@@ -115,75 +125,24 @@ body {
         box-shadow: inset -20px -20px #e4f5ff;
         display: flex;
         flex-direction: column;
-        
-        /* Custom Scrollbar */
+
         &::-webkit-scrollbar {
             width: 12px;
         }
 
         &::-webkit-scrollbar-track {
-            background: #101010; /* Color of the scrollbar track */
+            background: #101010;
         }
 
         &::-webkit-scrollbar-thumb {
-            background: $secondary-color; /* Color of the scrollbar thumb */
+            background: $secondary-color; 
             border-radius: 10px;
-            border: 3px solid #101010; /* Padding around scrollbar thumb */
+            border: 3px solid #101010; 
         }
 
         &::-webkit-scrollbar-thumb:hover {
             background: lighten($secondary-color, 10%);
         }
-    }
-}
-
-.sidebar {
-    width: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-right: 10px;
-    padding-left: 10px;
-    padding-top: 10px;
-    box-shadow: inset 20px 20px #e4f5ff;
-    border-radius: 10px;
-    background: #101010;
-    backdrop-filter: blur(5px);
-
-    &__item {
-        width: 100%;
-        color: #ecf8ff;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        transition:
-            background-color 0.3s,
-            transform 0.3s;
-        background-color: #1b1b1b;
-        border-radius: 10px;
-        padding: 8px 0;
-
-        &:hover {
-            background-color: $secondary-color;
-            transform: scale(1.05);
-        }
-
-        &--active {
-            background-image: linear-gradient(135deg, $gradient-start, $gradient-end);
-            box-shadow: 0 0 15px $secondary-color;
-        }
-    }
-
-    &__icon {
-        margin: 10px 0;
-        animation: rotateIn 0.5s ease-in-out;
-    }
-
-    &__text {
-        font-size: 16px;
     }
 }
 
@@ -197,13 +156,13 @@ body {
     }
 
     &::-webkit-scrollbar-track {
-        background: #101010; 
+        background: #101010;
     }
 
     &::-webkit-scrollbar-thumb {
         background: $secondary-color;
         border-radius: 10px;
-        border: 3px solid #101010; 
+        border: 3px solid #101010;
     }
 
     &::-webkit-scrollbar-thumb:hover {
@@ -213,9 +172,8 @@ body {
 
 h1 {
     margin: 0;
-    font-size: 48px;
+    font-size: 20px;
     padding: 0.5rem 1rem;
-    text-transform: uppercase;
     letter-spacing: 0.2rem;
     text-align: center;
 
@@ -270,19 +228,18 @@ a {
         gap: 3rem;
     }
 
-
     &::-webkit-scrollbar {
         width: 12px;
     }
 
     &::-webkit-scrollbar-track {
-        background: #101010; 
+        background: #101010;
     }
 
     &::-webkit-scrollbar-thumb {
-        background: $secondary-color; 
+        background: $secondary-color;
         border-radius: 10px;
-        border: 3px solid #101010; 
+        border: 3px solid #101010;
     }
 
     &::-webkit-scrollbar-thumb:hover {

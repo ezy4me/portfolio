@@ -1,0 +1,95 @@
+.profile {
+    width: 320px;
+    margin-right: 10px;
+    background: #151515;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s;
+
+    &__header {
+        background-color: #101010;
+        padding: 10px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 20px;
+        letter-spacing: 0.2rem;
+        font-weight: bold;
+        text-align: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    &__image {
+        position: relative;
+        margin-bottom: 20px;
+        transition: transform 0.3s;
+
+
+        img {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            border: 4px solid #1c1c1c;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        &::before {
+            border-radius: 50%;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba($color: #5900ff, $alpha: 0.2);
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__body {
+        padding: 0 20px;
+        color: #fff;
+        font-size: 0.9em;
+        line-height: 1.6;
+        text-align: center;
+
+        p {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+
+        .profile__social-link {
+            color: #fff;
+            font-size: 2.5em;
+            transition: color 0.3s;
+
+            &:hover {
+                color: #5900ff;
+            }
+        }
+    }
+
+    &__name {
+        font-size: 24px;
+    }
+}

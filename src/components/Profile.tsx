@@ -17,7 +17,7 @@ const Profile: React.FC = () => {
       </div>
       <div className="profile__content">
         <div className="profile__image">
-          <img src="/public/avatar.png" alt="profile" />
+          <img src="/avatar.png" alt="profile" />
         </div>
         <div className="profile__body">
           <p className="profile__name">Maximov Roman</p>

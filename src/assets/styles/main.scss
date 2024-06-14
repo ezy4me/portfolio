@@ -1,12 +1,13 @@
-@import './normalize.scss';
+@import "./normalize.scss";
 
-@import './base.scss';
+@import "./base.scss";
 
-@import './sidebar.scss';
-@import './profile.scss';
-@import './typewriter.scss';
+@import "./components/modal.scss";
+@import "./components/project-info.scss";
 
-@import './pages/home.scss';
-@import './pages/projects.scss';
+@import "./sidebar.scss";
+@import "./profile.scss";
+@import "./typewriter.scss";
 
-
+@import "./pages/home.scss";
+@import "./pages/projects.scss";

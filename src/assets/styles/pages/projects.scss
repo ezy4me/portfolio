@@ -50,12 +50,18 @@
 }
 
 .card__plus {
-    width: 1em; 
-    height: 1em; 
-    line-height: 1em; 
-    text-align: center; 
-    border-radius: 50%; 
-    font-size: 2em; 
-    background: rgba($color: #ffffff, $alpha: .8);
-    color: #5900ff; 
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 2em;
+    background: rgba($color: #ffffff, $alpha: 0.8);
+    color: #5900ff;
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
 }

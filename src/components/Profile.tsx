@@ -1,5 +1,5 @@
 import React from "react";
-import { FaTelegram } from "react-icons/fa";
+import { FaTelegram, FaGithub } from "react-icons/fa";
 import Typewriter from "./Typewriter";
 
 const Profile: React.FC = () => {
@@ -23,8 +23,11 @@ const Profile: React.FC = () => {
           <p className="profile__name">Maximov Roman</p>
           <Typewriter texts={texts} speed={100} />
           <div className="profile__socials">
-            <a href="#" className="profile__social-link">
+            <a href="https://t.me/sadwoe" className="profile__social-link">
               <FaTelegram />
+            </a>
+            <a href="https://github.com/ezy4me" className="profile__social-link">
+              <FaGithub />
             </a>
           </div>
         </div>

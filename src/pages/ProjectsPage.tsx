@@ -12,7 +12,7 @@ const ProjectsPage = () => {
   return (
     <div className="page projects-page">
       <div className="page__header">
-        <h1 className="page__title">Projects</h1>
+        <h1 className="page__title">// Projects</h1>
       </div>
       <div className="page__content">
         <div className="projects">

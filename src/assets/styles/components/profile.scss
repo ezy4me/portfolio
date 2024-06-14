@@ -52,6 +52,8 @@
         font-size: 0.9em;
         line-height: 1.6;
         text-align: center;
+        width: calc(100% - 20px * 2);
+
 
         p {
             margin-bottom: 20px;
@@ -60,9 +62,11 @@
 
     &__socials {
         margin-top: 60px;
+        padding-top: 20px;
         display: flex;
         justify-content: center;
         gap: 16px;
+        border-top: 1px solid #2c2c2c;
 
         .profile__social-link {
             color: #fff;

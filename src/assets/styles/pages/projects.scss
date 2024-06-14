@@ -25,43 +25,43 @@
     color: white;
     font-size: 1.5em;
     text-align: center;
-}
 
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.card:hover .card__overlay {
-    opacity: 1;
-}
-
-.card__plus {
-    width: 1em;
-    height: 1em;
-    line-height: 1em;
-    text-align: center;
-    border-radius: 50%;
-    font-size: 2em;
-    background: rgba($color: #ffffff, $alpha: 0.8);
-    color: #5900ff;
-    cursor: pointer;
-    transition: transform .2s ease-in-out;
-    
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    &:hover &__overlay {
+        opacity: 1;
+    }
+
+    &__plus {
+        width: 1em;
+        height: 1em;
+        line-height: 1em;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 2em;
+        background: rgba($color: #ffffff, $alpha: 0.8);
+        color: #5900ff;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }

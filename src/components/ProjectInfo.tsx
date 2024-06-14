@@ -33,10 +33,9 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({ projectName }) => {
           </button>
         </div>
       </div>
-      <p className="text">Project</p>
       <div className="project-info__content">
         <div className="tech-stack">
-          <p className="text tech-stack__title">Tech-Stack</p>
+          <p className="subtitle">Tech-Stack</p>
           <ul className="tech-stack__list">
             <li className="tech-stack__list-item">React</li>
             <li className="tech-stack__list-item">Nest</li>
@@ -44,7 +43,13 @@ const ProjectInfo: React.FC<ProjectInfoProps> = ({ projectName }) => {
           </ul>
         </div>
         <div className="project-info__description">
-          <p className="text">Description</p>
+          <p className="subtitle">Description</p>
+          <p className="text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit
+            labore expedita quos deserunt eaque minima consectetur assumenda
+            similique, omnis cum incidunt iusto optio reprehenderit placeat
+            officia accusamus quas. Maiores, officia?
+          </p>
         </div>
       </div>
     </div>

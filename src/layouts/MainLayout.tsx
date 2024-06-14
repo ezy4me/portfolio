@@ -17,9 +17,9 @@ const MainLayout = () => {
         <Sidebar />
         <Profile />
         <div className="layout__content">
-          <div className="layout__header">
+          {/* <div className="layout__header">
             <h1 className="layout__title">My Portfolio</h1>
-          </div>
+          </div> */}
           <div className="layout__body">
             <MainContent />
           </div>

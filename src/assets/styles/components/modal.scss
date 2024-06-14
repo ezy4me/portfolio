@@ -3,7 +3,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(10, 10, 10, 0.8);
+    background-color: rgba(10, 10, 10, 0.5);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -13,17 +13,23 @@
     min-height: 560px;
     max-height: 560px;
     overflow: auto;
+    overflow-x: hidden;
+
 
     &__content {
     }
 
     &__close {
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 0px;
+        right: 0px;
         cursor: pointer;
         font-size: 24px;
-        color: #aaa;
+        color: #bebebe;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px;
+        border-radius: 50%;
 
         cursor: pointer;
         transition: transform 0.2s ease-in-out;
@@ -42,4 +48,6 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 900;
+    backdrop-filter: blur(5px);
+    
 }

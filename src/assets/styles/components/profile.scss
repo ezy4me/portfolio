@@ -59,9 +59,10 @@
     }
 
     &__socials {
+        margin-top: 60px;
         display: flex;
         justify-content: center;
-        gap: 15px;
+        gap: 16px;
 
         .profile__social-link {
             color: #fff;

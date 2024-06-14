@@ -13,7 +13,7 @@ const Profile: React.FC = () => {
   return (
     <div className="profile">
       <div className="profile__header">
-        <p>Profile Header</p>
+        <p>Profile</p>
       </div>
       <div className="profile__content">
         <div className="profile__image">

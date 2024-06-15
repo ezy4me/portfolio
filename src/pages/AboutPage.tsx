@@ -20,7 +20,7 @@ function AboutPage() {
             <span className="string">"Web Developer"</span>,<br />
             &nbsp;&nbsp;<span className="property">interests</span>: [
             <span className="string">"Coding"</span>,{" "}
-            <span className="string">"Music"</span>, <br />
+            <span className="string">"Music"</span>], <br />
             &nbsp;&nbsp;<span className="property">skills</span>: [
             <span className="string">"JavaScript"</span>,{" "}
             <span className="string">"React"</span>,{" "}

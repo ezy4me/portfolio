@@ -74,6 +74,14 @@
     transform: translateX(100%);
     transition: transform 0.3s ease-out;
     z-index: 1000;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+    }
 }
 
 .burger-menu.open {
@@ -93,7 +101,7 @@
     align-items: center;
     justify-content: center;
 
-    border-bottom: 1px solid #dadada;
+    border-bottom: 1px solid #2c2c2c;
 
     .profile__socials {
         margin: 0;

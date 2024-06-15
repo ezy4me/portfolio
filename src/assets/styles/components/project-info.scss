@@ -10,11 +10,31 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
         gap: 1rem;
+        padding: 10px 0;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+            width: 12px;
+        }
+    
+        &::-webkit-scrollbar-track {
+            background: #101010;
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background: $secondary-color;
+            border-radius: 10px;
+            border: 3px solid #101010;
+        }
+    
+        &::-webkit-scrollbar-thumb:hover {
+            background: lighten($secondary-color, 10%);
+        }
     }
 
     &__images-item {
         position: relative;
-        width: calc(400px - 22px);
+        width: calc(400px - 40px);
         height: 200px;
         background-size: cover;
         background-blend-mode: overlay;
@@ -120,5 +140,23 @@
         padding: 5px 10px;
         border-radius: 4px;
         color: #101010;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-info {
+        &__header {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        &__content {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        &__description {
+            width: 100%;
+        }
     }
 }

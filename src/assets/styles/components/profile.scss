@@ -31,7 +31,6 @@
 
     &__image {
         position: relative;
-        margin-bottom: 20px;
         transition: transform 0.3s;
 
         img {
@@ -55,7 +54,7 @@
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
-        width: calc(100% - 20px * 2);
+        width: 100%;
 
         p {
             margin-bottom: 20px;
@@ -69,6 +68,11 @@
         justify-content: center;
         gap: 16px;
         border-top: 1px solid #2c2c2c;
+        width: 100%;
+
+        a {
+            display: flex;
+        }
 
         .profile__social-link {
             color: #fff;
@@ -83,6 +87,7 @@
 
     &__name {
         font-size: 24px;
+        margin: 20px 0;
     }
 }
 

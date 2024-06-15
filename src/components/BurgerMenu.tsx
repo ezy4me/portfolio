@@ -18,6 +18,23 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
   const currentPath = location.pathname;
 
+  const handleMenuClick = () => {
+    onClose();
+  };
+
+  const renderMenuItem = (to: string, icon: JSX.Element, text: string) => (
+    <li
+      className={`burger-menu__item ${
+        currentPath === to ? "burger-menu__item--active" : ""
+      }`}
+      onClick={handleMenuClick}>
+      <Link to={to} className="burger-menu__link">
+        {icon}
+        <span className="burger-menu__text">{text}</span>
+      </Link>
+    </li>
+  );
+
   return (
     <div className={`burger-menu ${isOpen ? "open" : ""}`}>
       <div className="burger-menu__content">
@@ -30,7 +47,6 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, onClose }) => {
           </div>
           <div className="burger-menu__body">
             <p className="profile__name">Maximov Roman</p>
-
             <div className="profile__socials">
               <a href="https://t.me/sadwoe" className="profile__social-link">
                 <FaTelegram />
@@ -44,42 +60,22 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
         <ul className="burger-menu__list">
-          <li
-            className={`burger-menu__item ${
-              currentPath === "/" ? "burger-menu__item--active" : ""
-            }`}>
-            <Link to="/" className="burger-menu__link">
-              <FaHome className="burger-menu__icon" />
-              <span className="burger-menu__text">Home</span>
-            </Link>
-          </li>
-          <li
-            className={`burger-menu__item ${
-              currentPath === "/about" ? "burger-menu__item--active" : ""
-            }`}>
-            <Link to="/about" className="burger-menu__link">
-              <FaUser className="burger-menu__icon" />
-              <span className="burger-menu__text">About</span>
-            </Link>
-          </li>
-          <li
-            className={`burger-menu__item ${
-              currentPath === "/contact" ? "burger-menu__item--active" : ""
-            }`}>
-            <Link to="/contact" className="burger-menu__link">
-              <FaMailBulk className="burger-menu__icon" />
-              <span className="burger-menu__text">Contact</span>
-            </Link>
-          </li>
-          <li
-            className={`burger-menu__item ${
-              currentPath === "/projects" ? "burger-menu__item--active" : ""
-            }`}>
-            <Link to="/projects" className="burger-menu__link">
-              <FaBook className="burger-menu__icon" />
-              <span className="burger-menu__text">Projects</span>
-            </Link>
-          </li>
+          {renderMenuItem("/", <FaHome className="burger-menu__icon" />, "Home")}
+          {renderMenuItem(
+            "/about",
+            <FaUser className="burger-menu__icon" />,
+            "About"
+          )}
+          {renderMenuItem(
+            "/contact",
+            <FaMailBulk className="burger-menu__icon" />,
+            "Contact"
+          )}
+          {renderMenuItem(
+            "/projects",
+            <FaBook className="burger-menu__icon" />,
+            "Projects"
+          )}
         </ul>
       </div>
     </div>

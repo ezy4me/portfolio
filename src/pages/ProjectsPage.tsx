@@ -1,3 +1,4 @@
+import React from "react";
 import ProjectInfo from "@/components/ProjectInfo";
 import { useModal } from "@/utils/ModalProvider";
 
@@ -15,54 +16,23 @@ const ProjectsPage = () => {
       </div>
       <div className="page__content">
         <div className="projects">
-          <div
-            className="card"
-            style={{
-              backgroundImage: "url('/landing_1.png')",
-              backgroundColor: "rgba(0,0,0,0.5)",
-            }}
-            onClick={() => onProjectInfo("Project 1")}>
-            <p className="card__text">Project 1</p>
-            <div className="card__overlay">
-              <span className="card__plus">+</span>
-            </div>
-          </div>
-          <div
-            className="card"
-            style={{
-              backgroundImage: "url('/landing_2.png')",
-              backgroundColor: "rgba(0,0,0,0.5)",
-            }}
-            onClick={() => onProjectInfo("Project 2")}>
-            <p className="card__text">Project 2</p>
-            <div className="card__overlay">
-              <span className="card__plus">+</span>
-            </div>
-          </div>
-          <div
-            className="card"
-            style={{
-              backgroundImage: "url('/landing_3.png')",
-              backgroundColor: "rgba(0,0,0,0.5)",
-            }}
-            onClick={() => onProjectInfo("Project 3")}>
-            <p className="card__text">Project 3</p>
-            <div className="card__overlay">
-              <span className="card__plus">+</span>
-            </div>
-          </div>
-          <div
-            className="card"
-            style={{
-              backgroundImage: "url('/landing_4.png')",
-              backgroundColor: "rgba(0,0,0,0.5)",
-            }}
-            onClick={() => onProjectInfo("Project 4")}>
-            <p className="card__text">Project 4</p>
-            <div className="card__overlay">
-              <span className="card__plus">+</span>
-            </div>
-          </div>
+          {["Project 1", "Project 2", "Project 3", "Project 4"].map(
+            (project, index) => (
+              <div
+                className="card"
+                key={index}
+                style={{
+                  backgroundImage: `url('/landing_${index + 1}.png')`,
+                  backgroundColor: "rgba(0,0,0,0.5)",
+                }}
+                onClick={() => onProjectInfo(project)}>
+                <p className="card__text">{project}</p>
+                <div className="card__overlay">
+                  <span className="card__plus">+</span>
+                </div>
+              </div>
+            )
+          )}
         </div>
       </div>
     </div>

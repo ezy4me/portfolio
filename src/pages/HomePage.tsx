@@ -1,4 +1,6 @@
 function HomePage() {
+  const cardCount = 24;
+
   return (
     <div className="page home-page">
       <div className="page__header">
@@ -6,16 +8,11 @@ function HomePage() {
       </div>
       <div className="page__content">
         <div className="analytics">
-          <div className="card">
-            <p className="card__text"></p>
-          </div>
-          <div className="card">
-            <p className="card__text"></p>
-          </div>
-          <div className="card">
-            <p className="card__text"></p>
-          </div>
-         
+          {Array.from({ length: cardCount }).map((_, index) => (
+            <div className="card" key={index}>
+              <p className="card__text">{index + 1}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

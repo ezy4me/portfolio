@@ -1,21 +1,69 @@
-.projects-page .page__content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.page {
+    min-height: calc(100%);
+
+    &__content {
+        min-height: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+        display: grid;
+        gap: 1.5rem;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #101010;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #5900ff; // secondary-color
+            border-radius: 10px;
+            border: 3px solid #101010;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: lighten(#5900ff, 10%);
+        }
+    }
+
+    &__header {
+        background-color: #101010;
+        padding: 20px;
+        height: 40px;
+        text-align: start;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        animation: slideInFromTop 1s ease-in-out;
+    }
+
+    &__title {
+        margin: 0;
+        color: #ecf8ff;
+    }
+
+    @keyframes slideInFromTop {
+        0% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 }
 
 .projects {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
 }
 
 .card {
     position: relative;
-    width: 200px;
-    height: 200px;
     background-size: cover;
     background-blend-mode: overlay;
     border-radius: 10px;
@@ -28,6 +76,7 @@
     font-size: 1.5em;
     text-align: center;
     cursor: pointer;
+    min-height: 200px;
 
     &:hover {
         transform: scale(1.05);
@@ -58,7 +107,7 @@
         text-align: center;
         border-radius: 50%;
         font-size: 2em;
-        background: rgba($color: #ffffff, $alpha: 0.8);
+        background: rgba(#ffffff, 0.8);
         color: #5900ff;
         cursor: pointer;
         transition: transform 0.2s ease-in-out;
@@ -67,14 +116,8 @@
             transform: scale(1.1);
         }
     }
-}
 
-.text {
-    font-size: 16px;
+    &__text {
+        font-size: 1em;
+    }
 }
-
-.subtitle {
-    font-size: 20px;
-    margin: 10px 0;
-}
-

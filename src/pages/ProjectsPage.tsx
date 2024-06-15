@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectInfo from "@/components/ProjectInfo";
 import { useModal } from "@/utils/ModalProvider";
 

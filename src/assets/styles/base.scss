@@ -15,6 +15,16 @@ $gradient-end: #1d004d; // Deep Indigo
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+@media (hover: none) {
+    * {
+        &:hover {
+            transform: none;
+        }
+    }
 }
 
 body {

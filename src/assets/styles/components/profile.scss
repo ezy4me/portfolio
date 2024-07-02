@@ -32,12 +32,12 @@
     &__image {
         position: relative;
         transition: transform 0.3s;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(179, 179, 179, 0.2);
 
         img {
             width: 128px;
             height: 128px;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(179, 179, 179, 0.2);
         }
 
         &:hover {

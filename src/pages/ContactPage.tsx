@@ -1,4 +1,6 @@
-function ContactPage() {
+import React from "react";
+
+const ContactPage: React.FC = () => {
   return (
     <div className="page contact-page">
       <div className="page__header">
@@ -14,10 +16,11 @@ function ContactPage() {
               type="text"
               id="name"
               name="name"
-              className="contact-form__input"
+              className="contact-form__input effect"
               placeholder="Your name"
               required
             />
+            <span className="focus-border" />
           </div>
           <div className="contact-form__group">
             <label htmlFor="email" className="contact-form__label">
@@ -28,9 +31,10 @@ function ContactPage() {
               id="email"
               name="email"
               placeholder="Your email"
-              className="contact-form__input"
+              className="contact-form__input effect"
               required
             />
+            <span className="focus-border" />
           </div>
           <div className="contact-form__group">
             <label htmlFor="message" className="contact-form__label">
@@ -40,8 +44,10 @@ function ContactPage() {
               id="message"
               placeholder="Your message"
               name="message"
-              className="contact-form__textarea"
-              required></textarea>
+              className="contact-form__textarea effect"
+              required
+            />
+            <span className="focus-border" />
           </div>
           <button type="submit" className="btn contact-form__button">
             Submit
@@ -50,6 +56,6 @@ function ContactPage() {
       </div>
     </div>
   );
-}
+};
 
 export default ContactPage;

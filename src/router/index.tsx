@@ -1,4 +1,5 @@
 import ContactPage from "@/pages/ContactPage";
+import FeedbackPage from "@/pages/FeedbackPage";
 import HomePage from "@/pages/HomePage";
 import ProjectsPage from "@/pages/ProjectsPage";
 import MainLayout from "@layouts/MainLayout";
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/projects" element={<ProjectsPage />} />
+      <Route path="/feedback" element={<FeedbackPage />} />
     </Route>
   )
 );

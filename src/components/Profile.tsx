@@ -17,7 +17,7 @@ const Profile: React.FC = () => {
       </div>
       <div className="profile__content">
         <div className="profile__image">
-          <img src="/avatar.png" alt="profile" />
+          <img src="/panda.png" alt="profile" />
         </div>
         <div className="profile__body">
           <p className="profile__name">Maximov Roman</p>
@@ -32,14 +32,14 @@ const Profile: React.FC = () => {
               <FaGithub />
             </a>
           </div>
-          <div className="language">
+          {/* <div className="language">
             <div className="language__item">
               <img src="/rus.png" alt="Russian" />
             </div>
             <div className="language__item">
               <img src="/eng.png" alt="English" />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
     outline: none;
 }
 
-.contact-form {
+.feedback-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -40,7 +40,7 @@
 
     &__textarea {
         resize: vertical;
-        height: 150px;
+        height: 80px;
     }
 
     &__button {
@@ -70,6 +70,63 @@
         transform: scaleX(0);
         transform-origin: center;
         transition: transform 0.3s ease;
+    }
+}
+
+.star-rating {
+    display: flex;
+    gap: 0.5rem;
+
+    &__star {
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #ccc;
+        display: inline-block;
+
+        &.filled {
+            color: #ff0;
+        }
+    }
+}
+
+.comments-section {
+    .comment {
+        background: #202020;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        &__header {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        &__body {
+        }
+
+        &__footer {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &__name {
+            font-weight: bold;
+        }
+
+        &__date {
+            color: gray;
+        }
+
+        &__rating {
+        }
+
+        &__message {
+            font-size: 1rem;
+        }
     }
 }
 

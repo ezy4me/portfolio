@@ -8,7 +8,7 @@
     overflow: hidden;
     z-index: 9;
     backdrop-filter: blur(10px);
-    box-shadow: 0 0 60px 20px rgb(5, 2, 41);
+    box-shadow: 0 0 60px 20px #000000;
 
     &__content {
         display: flex;

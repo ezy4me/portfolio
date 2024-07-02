@@ -6,6 +6,7 @@ import {
   FaBook,
   FaTelegram,
   FaGithub,
+  FaComment,
 } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 
@@ -43,7 +44,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, onClose }) => {
         </button>
         <div className="burger-menu__profile">
           <div className="profile__image">
-            <img src="/avatar.png" alt="profile" />
+            <img src="/panda.png" alt="profile" />
           </div>
           <div className="burger-menu__body">
             <p className="profile__name">Maximov Roman</p>
@@ -60,21 +61,30 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
         <ul className="burger-menu__list">
-          {renderMenuItem("/", <FaHome className="burger-menu__icon" />, "Home")}
+          {renderMenuItem(
+            "/",
+            <FaHome className="burger-menu__icon" />,
+            "Home"
+          )}
           {renderMenuItem(
             "/about",
             <FaUser className="burger-menu__icon" />,
             "About"
           )}
           {renderMenuItem(
-            "/contact",
-            <FaMailBulk className="burger-menu__icon" />,
-            "Contact"
-          )}
-          {renderMenuItem(
             "/projects",
             <FaBook className="burger-menu__icon" />,
             "Projects"
+          )}
+          {renderMenuItem(
+            "/feedback",
+            <FaComment className="burger-menu__icon" />,
+            "Feedback"
+          )}
+          {renderMenuItem(
+            "/contact",
+            <FaMailBulk className="burger-menu__icon" />,
+            "Contact"
           )}
         </ul>
       </div>
